@@ -1,0 +1,247 @@
+/*Robbert Van der Grift
+Student#: 200326832
+date: 09/05/2016
+==================================================*/
+/*webfonts*/
+@import url(https://fonts.googleapis.com/css?family=PT+Sans:700italic);
+@import url(https://fonts.googleapis.com/css?family=Josefin+Sans);
+/*normalize*/
+@import url("normalize.css");
+html {
+  background: #CCC url(../images/bookbackground.jpg) no-repeat top left;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 100%;
+}
+/*body styles
+---------------------------------*/
+body {
+  /*fall back*/
+  background-color: none;
+  background-color: rgba(51, 51, 51, 0.5);
+}
+div.title {
+  background: #333;
+}
+/*header styles
+------------------------------*/
+header {
+  /*border: 2px solid red;*/
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  color: #fff;
+}
+h1 {
+   font-size: 2em;
+   text-shadow: 1px 1px #2DAAFF;
+   font-family: 'PT Sans', sans-serif;
+}
+header p {
+  font-family: 'PT Sans', sans-serif;
+  font-size: 15px;
+  border-bottom: 3px solid #2DAAFF
+}
+/*-----------------------------
+end of header styles*/
+/*navagation styles
+------------------------------*/
+@media only screen (min-width:786);
+nav {
+  position: absolute;
+  width: 100%;
+}
+nav ul {
+  list-style: none;
+}
+nav ul#book{
+  /*border: 2px solid white;*/
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  background: #333;
+}
+nav ul {
+  margin: 0;
+  padding: 0;
+}
+nav ul li {
+  /*border: 2px solid orange;*/
+  padding: 0;
+}
+.book1, .book2, .book3, .book4 {
+  width: 25%;
+}
+nav a {
+  text-decoration: none;
+  color: #fff;
+  display: block;
+  size: cover;
+  height: 100%;
+  background: #333;
+  /*border: 2px solid green;*/
+  padding: 3% 0;
+  margin: 0;
+}
+nav a:hover {
+  background-color: #2DAAFF;
+}
+.book1 ul#book1 , .book2 ul#book2, .book3 ul#book3, .book4 ul#book4 {
+  /*transiton effect use pure css as a guide http://cssdeck.com/labs/pure-css3-smooth-drop-down-menu*/
+    position: absolute;
+    width: 25%;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1;
+    transition: all .5s ease;
+}
+nav ul li ul li a {
+  padding: 1% 0 ;
+}
+.book1:hover ul#book1 , .book2:hover ul#book2, .book3:hover ul#book3, .book4:hover ul#book4 {
+  opacity: 1;
+      visibility: visible;
+
+}
+.Pnav {
+  position: fixed;
+  top: 0;
+  margin-top: ;
+}
+.transbg {
+  background-color: rgba(51, 51, 51, 0.7);
+}
+#menu-toggle {
+  display: none;
+}
+#close {
+  margin: 0;
+  padding: 10px 10px;
+  display: none;
+}
+/*------------------------------
+end of navstyles*/
+/*main and section styles
+-----------------------------------*/
+/*main styles*/
+main {
+/*border: 2px solid orange;*/
+/*fall back*/
+background: rgb(64, 64, 64);
+background: rgba(64, 64, 64, 0.8);
+display: flex;
+flex-direction: column;
+height: 100%;
+width: 80%;
+padding-top: 5%;
+margin: 0 auto;
+font-family: 'Josefin Sans', sans-serif;
+}
+h2 {
+  color: #111;
+  padding-bottom: 2%;
+}
+p {
+    color: #fff;
+}
+main h2, main p {
+  text-align: center;
+  max-width: 80%;
+  margin: 0 auto;
+}
+/*sections styles*/
+section {
+  width: 80%;
+  margin: 0 auto;
+  border-bottom: 1.5px solid #2DAAFF
+}
+section h3 {
+  color: #111;
+  text-align: center;
+  font-size: 1.5em;
+  letter-spacing: 10px;
+}
+section h4 {
+  color: #111;
+}
+section p {
+  text-align: left;
+  max-width: 100%;
+  line-height: 1.5em;
+  letter-spacing: 0.5px;
+
+}
+section#book1 img {
+  float: right;
+}
+section#book2 img {
+  float: left;
+  padding-right: 2%;
+}
+section#book3 img  {
+  float: left;
+  padding-right: 2%;
+}
+section#book4 {
+  border-bottom: none;
+}
+/*----------------------------------
+end of main and section styles*/
+/*footer styles
+------------------------------------*/
+footer p a {
+  position: fixed;
+  bottom: 1.5em;
+  right: 1.5em;
+  background-color: rgba(51, 51, 51, 0.7);
+  width: 8%;
+  height: 30px;
+  padding: 10px;
+  display: none;
+  color: #2DAAFF;
+  text-align: center;
+}
+footer {
+
+}
+/*-----------------------------------
+end of footer styles*/
+/*=======================================================*/
+/*responsive screen styles*/
+/*-------------------------------------------*/
+/* 425 px and smaller */
+@media only screen and (max-width: 786px) {
+  nav ul#book{
+    background: #333;
+    flex-direction: column;
+    position: relative;
+    display: none;
+}
+.book1, .book2, .book3, .book4 {
+  width: 100%;
+}
+nav ul li ul li a {
+  display: none;
+}
+.book1 ul#book1 , .book2 ul#book2, .book3 ul#book3, .book4 ul#book4 {
+  position: relative;
+  width: 100%;
+}
+nav ul li:hover ul li a {
+  display: block;
+}
+#close {
+  display: block;
+  margin: 0;
+  padding: 10px 10px;
+}
+#menu-toggle {
+  display: block;
+  color: #2DAAFF;
+  padding: 2px 2px;
+  margin-left: 90%;
+  background-color: #333;
+}
+}
+/*=====================================================
+END OF CSS DOCUMENT*/
